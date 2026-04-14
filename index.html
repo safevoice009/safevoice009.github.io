@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Panther | @safevoice009. Architecting the future of deterministic AI and autonomous infrastructure. Explore the AetherForge ecosystem.">
-    <title>Panther (@safevoice009) | Engineering Standards</title>
+    <meta name="description" content="Panther | @safevoice009. Clinical AI Architect & Product Builder. Specialized in deterministic AI systems, medical logic validation, and autonomous infrastructure.">
+    <title>Panther (@safevoice009) | Clinical AI Architect</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
             padding: 0;
             box-sizing: border-box;
             -webkit-font-smoothing: antialiased;
-            -webkit-tap-highlight-color: transparent; /* Fixes the blue highlight glitch */
+            -webkit-tap-highlight-color: transparent;
             outline: none !important;
         }
 
@@ -40,7 +40,7 @@
 
         /* --- Sections --- */
         header {
-            min-height: 90vh;
+            min-height: 95vh;
             padding: 120px 8vw 60px;
             display: flex;
             flex-direction: column;
@@ -84,46 +84,56 @@
 
         .summary {
             font-size: 1.5rem;
-            max-width: 700px;
-            color: #555;
+            max-width: 800px;
+            color: #444;
             margin-bottom: 60px;
             line-height: 1.4;
         }
 
-        /* --- Engineering Grid --- */
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            padding: 80px 8vw;
-            background: white;
+        /* --- Engineering Matrix (Horizontal Sections) --- */
+        .authority-block {
+            padding: 100px 8vw;
             border-top: 1px solid var(--gray-light);
+            background: white;
         }
 
-        .info-card h4 {
+        .authority-block h2 {
             font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: #999;
+            letter-spacing: 0.2em;
+            color: var(--indigo);
+            margin-bottom: 40px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+        }
+
+        .grid-item h3 {
+            font-size: 1.75rem;
+            font-weight: 500;
             margin-bottom: 20px;
+            letter-spacing: -0.02em;
         }
 
-        .info-card p {
-            font-size: 1.15rem;
-            line-height: 1.5;
-            font-weight: 400;
+        .grid-item p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #666;
         }
 
-        /* --- Repository Matrix --- */
+        /* --- Ecosystem --- */
         .container {
-            padding: 0 8vw 150px;
+            padding: 120px 8vw 150px;
         }
 
         .section-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            margin: 100px 0 60px;
+            margin-bottom: 60px;
         }
 
         .section-header h2 {
@@ -135,7 +145,7 @@
         .repo-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
+            gap: 32px;
         }
 
         .repo-card {
@@ -161,7 +171,6 @@
             font-size: 2.25rem;
             margin-bottom: 16px;
             font-weight: 500;
-            letter-spacing: -0.01em;
         }
 
         .repo-card p {
@@ -190,26 +199,32 @@
             text-transform: uppercase;
         }
 
-        .updated-at {
-            font-size: 0.8rem;
-            color: #999;
-            font-weight: 500;
-        }
-
         /* --- Footer --- */
         footer {
             background: var(--ink);
             color: var(--paper);
-            padding: 100px 8vw;
+            padding: 120px 8vw;
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
         }
+
+        .footer-links a {
+            color: var(--paper);
+            text-decoration: none;
+            display: block;
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+            opacity: 0.7;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover { opacity: 1; color: var(--indigo); }
 
         /* --- Responsive --- */
         @media (max-width: 1024px) {
-            h1 { font-size: 20vw; }
-            .info-grid { grid-template-columns: 1fr; gap: 60px; }
+            h1 { font-size: 18vw; }
+            .grid-3 { grid-template-columns: 1fr; }
             .repo-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -217,33 +232,55 @@
 <body>
 
     <header>
-        <div class="identity-badge">Tactical Engineering Core</div>
+        <div class="identity-badge">Clinical AI Architecture & Product Design</div>
         <h1>Panther<span class="handle">@safevoice009</span></h1>
         <p class="summary">
-            Architecting the future of deterministic AI environments and self-healing autonomous infrastructure. 
-            Focused on industrial-grade safety, global accessibility, and near-zero hallucination logic.
+            Bridging rigorous diagnostic reasoning with AI-driven product architecture. 
+            I specialize in evaluating LLMs for clinical accuracy, building autonomous healthcare tools, 
+            and engineering deterministic, self-healing code ecosystems.
         </p>
     </header>
 
-    <section class="info-grid">
-        <div class="info-card">
-            <h4>Global Footprint</h4>
-            <p>Multilingual tactical readiness in English, Mandarin, Spanish, Hindi, and Japanese. Built for global search dominance.</p>
+    <section class="authority-block">
+        <h2>The Diagnostic Engine</h2>
+        <div class="grid-3">
+            <div class="grid-item">
+                <h3>Clinical Logic</h3>
+                <p>Expertise in medical logic validation, drug safety auditing, and contraindication protocols within AI agents.</p>
+            </div>
+            <div class="grid-item">
+                <h3>LLM Evaluation</h3>
+                <p>Rigorous benchmarking of Large Language Models against clinical guidelines to ensure zero-hallucination outputs.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Code Synthesis</h3>
+                <p>Directing LLMs to build functional, production-ready codebases with advanced prompt engineering and architectural foresight.</p>
+            </div>
         </div>
-        <div class="info-card">
-            <h4>Engineering Standard</h4>
-            <p>Deterministic Finite State Machine (FSM) architecture. Self-healing daemons that monitor and auto-patch system ruptures.</p>
-        </div>
-        <div class="info-card">
-            <h4>Industrial Trust</h4>
-            <p>11+ professional repositories focused on security, automation, and decentralized intelligence. Verified by AetherForge.</p>
+    </section>
+
+    <section class="authority-block" style="background: var(--paper); border-top: none;">
+        <h2>Autonomous Ecosystems</h2>
+        <div class="grid-3">
+            <div class="grid-item">
+                <h3>WakeUp AI</h3>
+                <p>AI-Architect for morning briefings. Successfully transitioned from conceptual architecture to Play Store production. 0.3s latency.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Automation</h3>
+                <p>Expert Tasker/MacroDroid scripter. Built complex medical content pipelines via Make.com and automated cloud distributions.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Safevoice</h3>
+                <p>India's first anonymous student mental health platform. Architecting safe, encrypted spaces for high-stakes human reporting.</p>
+            </div>
         </div>
     </section>
 
     <div class="container">
         <div class="section-header">
             <h2>Ecosystem</h2>
-            <div class="badge" style="background: #E8F5E9; color: #2E7D32;">All Systems Operational</div>
+            <div class="badge" style="background: #E8F5E9; color: #2E7D32;">Verified Engineering</div>
         </div>
 
         <div id="repo-container" class="repo-grid">
@@ -252,10 +289,17 @@
     </div>
 
     <footer>
-        <div style="font-size: 2rem; font-weight: 300;">Panther</div>
-        <div style="text-align: right; line-height: 1.5;">
-            <p>&copy; 2026 Panther Engineering</p>
-            <p style="color: #666; font-size: 0.8rem;">Architect: safevoice009</p>
+        <div style="max-width: 400px;">
+            <div style="font-size: 2.5rem; font-weight: 300; margin-bottom: 20px;">Panther</div>
+            <p style="opacity: 0.6; line-height: 1.6;">
+                Focused on the intersection of medicine and autonomous intelligence. 
+                Building software that thinks clearly and heals itself.
+            </p>
+        </div>
+        <div class="footer-links" style="text-align: right;">
+            <a href="https://github.com/safevoice009">GitHub Repository Hub</a>
+            <a href="https://trochlea.online/">Official Network Site</a>
+            <a href="#repo-container">Explore Solutions &rarr;</a>
         </div>
     </footer>
 
@@ -269,7 +313,7 @@
                 let repos = await response.json();
 
                 repos = repos
-                    .filter(repo => !repo.fork)
+                    .filter(repo => !repo.fork && repo.name !== 'safevoice009.github.io')
                     .sort((a, b) => b.stargazers_count - a.stargazers_count);
 
                 CONTAINER.innerHTML = '';
@@ -277,17 +321,17 @@
                 repos.forEach(repo => {
                     const updatedAt = new Date(repo.pushed_at).toLocaleDateString(undefined, {
                         month: 'short',
-                        day: 'numeric'
+                        year: 'numeric'
                     });
 
                     CONTAINER.innerHTML += `
                         <a href="${repo.html_url}" class="repo-card" target="_blank">
-                            <div style="color: var(--indigo); font-weight: 700; font-size: 0.85rem; margin-bottom: 20px;">0${repos.indexOf(repo) + 1} &rarr; VIEW REPOSITORY</div>
+                            <div style="color: var(--indigo); font-weight: 700; font-size: 0.85rem; margin-bottom: 20px;">REF: ${repo.id} &rarr; OPEN</div>
                             <h3>${repo.name}</h3>
-                            <p>${repo.description || "Deterministic system designed for tactical autonomy and global search visibility."}</p>
+                            <p>${repo.description || "Deterministic clinical AI substrate designed for high-stakes autonomous orchestration."}</p>
                             <div class="repo-meta">
-                                <div class="badge">Build: Verified</div>
-                                <div class="updated-at">Last Push: ${updatedAt}</div>
+                                <div class="badge">Integrity: Verified</div>
+                                <div style="font-size: 0.8rem; color: #999;">Synced: ${updatedAt}</div>
                             </div>
                         </a>
                     `;
