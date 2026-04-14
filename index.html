@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official portfolio hub of safevoice009. Architect of AetherClaw, the first deterministic, self-healing AI agent framework.">
+    <meta name="keywords" content="safevoice009, AetherClaw, AI Agents, Deterministic AI, Self-Healing Code, GitHub Portfolio">
+    <title>safevoice009 | Digital Architect Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Outfit:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #7000ff;
+            --secondary: #00d4ff;
+            --bg: #050505;
+            --card-bg: #111;
+            --text: #eee;
+        }
+        body { 
+            background: var(--bg); 
+            color: var(--text); 
+            font-family: 'Inter', sans-serif; 
+            margin: 0; 
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at center, #110033 0%, #050505 70%);
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 4em;
+            margin: 0;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -2px;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            color: #888;
+            margin-top: 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: -50px auto 100px;
+            padding: 0 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px solid #222;
+            transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+        }
+        .card:hover {
+            border-color: var(--primary);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(112,0,255,0.2);
+        }
+        .card h3 {
+            margin: 0;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8em;
+            color: var(--secondary);
+        }
+        .card p {
+            color: #aaa;
+            margin: 15px 0 0;
+        }
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #221144;
+            color: var(--primary);
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        footer {
+            padding: 50px;
+            border-top: 1px solid #111;
+            text-align: center;
+            color: #444;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>safevoice009</h1>
+        <p class="subtitle">Autonomous Systems Architect & Strategic Lead</p>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            <a href="https://github.com/safevoice009/AetherClaw" class="card">
+                <h3>🌌 AetherClaw</h3>
+                <p>The world's first deterministic, self-healing autonomous agent framework. Beating OpenClaw with FSM logic and zero-hallucination protocols.</p>
+                <span class="tag">Flagship | AI Agents</span>
+            </a>
+            
+            <a href="https://github.com/safevoice009" class="card">
+                <h3>🛠️ Strategic Tools</h3>
+                <p>A collection of 11+ professional-grade repositories focused on security, automation, and decentralized intelligence.</p>
+                <span class="tag">Infrastructure</span>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 safevoice009. Optimized for Global Discovery.
+    </footer>
+</body>
+</html>
