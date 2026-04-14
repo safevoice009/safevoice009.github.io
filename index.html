@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Panther | @safevoice009. Clinical AI Architect & Product Builder. Specialized in deterministic AI systems, medical logic validation, and autonomous infrastructure.">
-    <title>Panther (@safevoice009) | Clinical AI Architect</title>
+    <meta name="description" content="Panther | @safevoice009. Clinical AI Architect & Product Builder. Specialized in deterministic AI systems and autonomous infrastructure.">
+    <title>Panther (@safevoice009) | Interactive Engineering</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
             --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        /* --- Global Resets & Fixes --- */
+        /* --- Global Resets --- */
         * {
             margin: 0;
             padding: 0;
@@ -30,6 +30,8 @@
             outline: none !important;
         }
 
+        html { scroll-behavior: smooth; }
+
         body {
             background-color: var(--paper);
             color: var(--ink);
@@ -38,21 +40,71 @@
             line-height: 1.1;
         }
 
-        /* --- Sections --- */
+        /* --- Interactive Aether Background --- */
+        #aether-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0.15; /* Subtle presence */
+        }
+
+        /* --- Floating Island Nav --- */
+        .nav-island {
+            position: fixed;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 8px 24px;
+            border-radius: 100px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            gap: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            transition: var(--transition);
+        }
+
+        .nav-island:hover {
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+        }
+
+        .nav-island a {
+            text-decoration: none;
+            color: var(--ink);
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        .nav-island a:hover {
+            color: var(--indigo);
+            background: var(--indigo-soft);
+        }
+
+        /* --- Content Layout --- */
         header {
-            min-height: 95vh;
-            padding: 120px 8vw 60px;
+            min-height: 100vh;
+            padding: 120px 8vw 100px;
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
-            background: linear-gradient(180deg, #F5F3ED 0%, var(--paper) 100%);
+            justify-content: center;
         }
 
         .identity-badge {
             font-size: 0.85rem;
             font-weight: 700;
             color: var(--indigo);
-            margin-bottom: 24px;
+            margin-bottom: 32px;
             display: flex;
             align-items: center;
             gap: 12px;
@@ -66,43 +118,43 @@
         }
 
         h1 {
-            font-size: clamp(3.5rem, 15vw, 9rem);
+            font-size: clamp(3.5rem, 15vw, 10rem);
             font-weight: 300;
-            letter-spacing: -0.04em;
-            line-height: 0.85;
-            margin-bottom: 32px;
+            letter-spacing: -0.05em;
+            line-height: 0.8;
+            margin-bottom: 40px;
         }
 
         .handle {
             color: var(--indigo);
             font-weight: 500;
-            font-size: 0.3em;
+            font-size: 0.25em;
             vertical-align: middle;
             margin-left: 20px;
-            opacity: 0.6;
+            opacity: 0.5;
         }
 
         .summary {
-            font-size: 1.5rem;
-            max-width: 800px;
+            font-size: 1.6rem;
+            max-width: 850px;
             color: #444;
-            margin-bottom: 60px;
             line-height: 1.4;
         }
 
-        /* --- Engineering Matrix (Horizontal Sections) --- */
-        .authority-block {
-            padding: 100px 8vw;
-            border-top: 1px solid var(--gray-light);
+        /* --- Sections --- */
+        .section-block {
+            padding: 120px 8vw;
             background: white;
+            border-top: 1px solid var(--gray-light);
+            position: relative;
         }
 
-        .authority-block h2 {
+        .section-label {
             font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 0.2em;
+            letter-spacing: 0.3em;
             color: var(--indigo);
-            margin-bottom: 40px;
+            margin-bottom: 60px;
         }
 
         .grid-3 {
@@ -112,36 +164,19 @@
         }
 
         .grid-item h3 {
-            font-size: 1.75rem;
+            font-size: 1.8rem;
+            margin-bottom: 24px;
             font-weight: 500;
-            margin-bottom: 20px;
             letter-spacing: -0.02em;
         }
 
         .grid-item p {
-            font-size: 1.1rem;
-            line-height: 1.6;
+            font-size: 1.15rem;
+            line-height: 1.7;
             color: #666;
         }
 
-        /* --- Ecosystem --- */
-        .container {
-            padding: 120px 8vw 150px;
-        }
-
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-bottom: 60px;
-        }
-
-        .section-header h2 {
-            font-size: 3.5rem;
-            font-weight: 500;
-            letter-spacing: -0.02em;
-        }
-
+        /* --- Repository Matrix --- */
         .repo-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -149,54 +184,19 @@
         }
 
         .repo-card {
-            background: white;
-            padding: 50px;
-            border-radius: 40px;
+            background: #fff;
+            padding: 60px;
+            border-radius: 48px;
             text-decoration: none;
             color: inherit;
-            display: flex;
-            flex-direction: column;
-            transition: var(--transition);
             border: 1px solid rgba(0,0,0,0.03);
-            position: relative;
+            transition: var(--transition);
         }
 
         .repo-card:hover {
-            transform: translateY(-10px) scale(1.01);
-            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.05);
+            transform: translateY(-12px) scale(1.01);
+            box-shadow: 0 60px 120px rgba(0, 0, 0, 0.05);
             border-color: var(--indigo-soft);
-        }
-
-        .repo-card h3 {
-            font-size: 2.25rem;
-            margin-bottom: 16px;
-            font-weight: 500;
-        }
-
-        .repo-card p {
-            font-size: 1.15rem;
-            color: #666;
-            margin-bottom: 40px;
-            line-height: 1.6;
-            flex-grow: 1;
-        }
-
-        .repo-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 30px;
-            border-top: 1px solid var(--gray-light);
-        }
-
-        .badge {
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 6px 14px;
-            border-radius: 100px;
-            background: var(--indigo-soft);
-            color: var(--indigo);
-            text-transform: uppercase;
         }
 
         /* --- Footer --- */
@@ -206,83 +206,75 @@
             padding: 120px 8vw;
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
         }
-
-        .footer-links a {
-            color: var(--paper);
-            text-decoration: none;
-            display: block;
-            font-size: 1.25rem;
-            margin-bottom: 16px;
-            opacity: 0.7;
-            transition: 0.3s;
-        }
-
-        .footer-links a:hover { opacity: 1; color: var(--indigo); }
 
         /* --- Responsive --- */
         @media (max-width: 1024px) {
             h1 { font-size: 18vw; }
-            .grid-3 { grid-template-columns: 1fr; }
-            .repo-grid { grid-template-columns: 1fr; }
+            .grid-3, .repo-grid { grid-template-columns: 1fr; }
+            .nav-island { width: 90%; gap: 10px; padding: 10px; }
+            .nav-island a { font-size: 0.7rem; padding: 6px 8px; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="identity-badge">Clinical AI Architecture & Product Design</div>
+    <nav class="nav-island">
+        <a href="#identity">Identity</a>
+        <a href="#engineering">Engineering</a>
+        <a href="#ecosystem">Ecosystem</a>
+        <a href="https://trochlea.online/">Network</a>
+    </nav>
+
+    <canvas id="aether-bg"></canvas>
+
+    <header id="identity">
+        <div class="identity-badge">Clinical AI Architecture & Advanced Autonomy</div>
         <h1>Panther<span class="handle">@safevoice009</span></h1>
         <p class="summary">
-            Bridging rigorous diagnostic reasoning with AI-driven product architecture. 
-            I specialize in evaluating LLMs for clinical accuracy, building autonomous healthcare tools, 
-            and engineering deterministic, self-healing code ecosystems.
+            Synthesizing clinical precision with autonomous architectural foresight. 
+            Focused on deterministic AI orchestration, hallucination-free healthcare logic, and self-healing infrastructure.
         </p>
     </header>
 
-    <section class="authority-block">
-        <h2>The Diagnostic Engine</h2>
+    <section id="engineering" class="section-block">
+        <div class="section-label">The Diagnostic Engine</div>
         <div class="grid-3">
             <div class="grid-item">
                 <h3>Clinical Logic</h3>
-                <p>Expertise in medical logic validation, drug safety auditing, and contraindication protocols within AI agents.</p>
-            </div>
-            <div class="grid-item">
-                <h3>LLM Evaluation</h3>
-                <p>Rigorous benchmarking of Large Language Models against clinical guidelines to ensure zero-hallucination outputs.</p>
-            </div>
-            <div class="grid-item">
-                <h3>Code Synthesis</h3>
-                <p>Directing LLMs to build functional, production-ready codebases with advanced prompt engineering and architectural foresight.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="authority-block" style="background: var(--paper); border-top: none;">
-        <h2>Autonomous Ecosystems</h2>
-        <div class="grid-3">
-            <div class="grid-item">
-                <h3>WakeUp AI</h3>
-                <p>AI-Architect for morning briefings. Successfully transitioned from conceptual architecture to Play Store production. 0.3s latency.</p>
+                <p>Medical logic validation and drug safety auditing protocols within neural environments.</p>
             </div>
             <div class="grid-item">
                 <h3>Automation</h3>
-                <p>Expert Tasker/MacroDroid scripter. Built complex medical content pipelines via Make.com and automated cloud distributions.</p>
+                <p>Advanced TASKER/Make.com mobile ecosystems fused with LLM-driven pipelines.</p>
             </div>
             <div class="grid-item">
-                <h3>Safevoice</h3>
-                <p>India's first anonymous student mental health platform. Architecting safe, encrypted spaces for high-stakes human reporting.</p>
+                <h3>Determinism</h3>
+                <p>Finite State Machine (FSM) architecture designed to eliminate stochastic agent drift.</p>
             </div>
         </div>
     </section>
 
-    <div class="container">
-        <div class="section-header">
-            <h2>Ecosystem</h2>
-            <div class="badge" style="background: #E8F5E9; color: #2E7D32;">Verified Engineering</div>
+    <section class="section-block" style="background: var(--paper); border-top: none;">
+        <div class="section-label">Autonomous Ecosystems</div>
+        <div class="grid-3">
+            <div class="grid-item">
+                <h3>WakeUp AI</h3>
+                <p>Morning synthesis agent. 0.3s latency. Transitioned from architecture to Play Store production.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Safevoice</h3>
+                <p>India's first anonymous student mental health substrate. Encrypted reporting at scale.</p>
+            </div>
+            <div class="grid-item">
+                <h3>AetherForge</h3>
+                <p>The core framework for high-authority repository indexing and global discovery.</p>
+            </div>
         </div>
+    </section>
 
+    <div id="ecosystem" class="section-block" style="background: white;">
+        <div class="section-label">Neural Ecosystem Matrix</div>
         <div id="repo-container" class="repo-grid">
             <div style="padding: 100px; text-align: center; color: #999;">Synchronizing Tactical Assets...</div>
         </div>
@@ -292,18 +284,97 @@
         <div style="max-width: 400px;">
             <div style="font-size: 2.5rem; font-weight: 300; margin-bottom: 20px;">Panther</div>
             <p style="opacity: 0.6; line-height: 1.6;">
-                Focused on the intersection of medicine and autonomous intelligence. 
-                Building software that thinks clearly and heals itself.
+                Bridging the gap between diagnostic intelligence and autonomous software.
             </p>
         </div>
-        <div class="footer-links" style="text-align: right;">
-            <a href="https://github.com/safevoice009">GitHub Repository Hub</a>
-            <a href="https://trochlea.online/">Official Network Site</a>
-            <a href="#repo-container">Explore Solutions &rarr;</a>
+        <div style="text-align: right;">
+            <p>&copy; 2026 Panther Engineering</p>
+            <p style="color: #666; font-size: 0.8rem; margin-top: 10px;">Architect: safevoice009</p>
         </div>
     </footer>
 
     <script>
+        // --- Neural Background Engine ---
+        const canvas = document.getElementById('aether-bg');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        const mouse = { x: null, y: null, radius: 150 };
+
+        window.addEventListener('mousemove', e => { mouse.x = e.x; mouse.y = e.y; });
+
+        function init() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            particles = [];
+            for (let i = 0; i < 100; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    size: Math.random() * 2 + 1,
+                    baseX: Math.random() * canvas.width,
+                    baseY: Math.random() * canvas.height,
+                    density: (Math.random() * 30) + 1
+                });
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particles.length; i++) {
+                let p = particles[i];
+                let dx = mouse.x - p.x;
+                let dy = mouse.y - p.y;
+                let distance = Math.sqrt(dx*dx + dy*dy);
+                let forceDirectionX = dx / distance;
+                let forceDirectionY = dy / distance;
+                let maxDistance = mouse.radius;
+                let force = (maxDistance - distance) / maxDistance;
+                let directionX = forceDirectionX * force * p.density;
+                let directionY = forceDirectionY * force * p.density;
+
+                if (distance < mouse.radius) {
+                    p.x -= directionX;
+                    p.y -= directionY;
+                } else {
+                    if (p.x !== p.baseX) {
+                        let dx = p.x - p.baseX;
+                        p.x -= dx/10;
+                    }
+                    if (p.y !== p.baseY) {
+                        let dy = p.y - p.baseY;
+                        p.y -= dy/10;
+                    }
+                }
+
+                ctx.fillStyle = '#5D43D2';
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Draw Lines
+                for (let j = i; j < particles.length; j++) {
+                    let p2 = particles[j];
+                    let dx = p.x - p2.x;
+                    let dy = p.y - p2.y;
+                    let distance = Math.sqrt(dx*dx + dy*dy);
+                    if (distance < 120) {
+                        ctx.strokeStyle = `rgba(93, 67, 210, ${0.2 - (distance/120)})`;
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', init);
+        init();
+        animate();
+
+        // --- Repository Engine ---
         const USERNAME = 'safevoice009';
         const CONTAINER = document.getElementById('repo-container');
 
@@ -311,27 +382,20 @@
             try {
                 const response = await fetch(`https://api.github.com/users/${USERNAME}/repos?sort=updated&per_page=100`);
                 let repos = await response.json();
-
-                repos = repos
-                    .filter(repo => !repo.fork && repo.name !== 'safevoice009.github.io')
+                repos = repos.filter(repo => !repo.fork && repo.name !== 'safevoice009.github.io')
                     .sort((a, b) => b.stargazers_count - a.stargazers_count);
 
                 CONTAINER.innerHTML = '';
-                
                 repos.forEach(repo => {
-                    const updatedAt = new Date(repo.pushed_at).toLocaleDateString(undefined, {
-                        month: 'short',
-                        year: 'numeric'
-                    });
-
+                    const updatedAt = new Date(repo.pushed_at).toLocaleDateString(undefined, { month: 'short', year: 'numeric' });
                     CONTAINER.innerHTML += `
                         <a href="${repo.html_url}" class="repo-card" target="_blank">
-                            <div style="color: var(--indigo); font-weight: 700; font-size: 0.85rem; margin-bottom: 20px;">REF: ${repo.id} &rarr; OPEN</div>
-                            <h3>${repo.name}</h3>
-                            <p>${repo.description || "Deterministic clinical AI substrate designed for high-stakes autonomous orchestration."}</p>
-                            <div class="repo-meta">
-                                <div class="badge">Integrity: Verified</div>
-                                <div style="font-size: 0.8rem; color: #999;">Synced: ${updatedAt}</div>
+                            <div style="color: var(--indigo); font-weight: 700; font-size: 0.8rem; margin-bottom: 24px; opacity: 0.7;">NODE: ${repo.id}</div>
+                            <h3 style="font-size: 2.5rem; margin-bottom: 20px;">${repo.name}</h3>
+                            <p style="margin-bottom: 40px;">${repo.description || "Experimental AI substrate focused on autonomous medical reasoning and high-authority indexing."}</p>
+                            <div style="display:flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--gray-light); padding-top: 30px;">
+                                <div style="font-size: 0.75rem; font-weight: 700; background: var(--indigo-soft); color: var(--indigo); padding: 6px 14px; border-radius: 50px;">VERIFIED</div>
+                                <div style="font-size: 0.8rem; color: #999;">${updatedAt}</div>
                             </div>
                         </a>
                     `;
@@ -340,7 +404,6 @@
                 CONTAINER.innerHTML = `<div style="padding: 100px; text-align: center; color: #ff4444;">Atmospheric sync failed.</div>`;
             }
         }
-
         fetchRepos();
     </script>
 </body>
